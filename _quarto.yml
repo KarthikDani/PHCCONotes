@@ -2,8 +2,8 @@ project:
   type: book
 
 book:
-  title: "PHCCONotes"
-  author: "Norah Jones"
+  title: "PHCCO Notes"
+  author: "Karthik Dani"
   date: "5/21/2024"
   chapters:
     - index.qmd
