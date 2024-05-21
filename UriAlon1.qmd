@@ -1,0 +1,121 @@
+# UriAlon - Intro to SysBio
+
+# Transcription Networks: Basic Concepts
+
+E. coli is a cell that contains a few million proteins, of about 4000 different types.
+
+Different situations, different proteins. Cell continuously monitors its environment and calculates amount of each type of proteins needed.
+
+Transcription network
+
+:   Information processing function that determines rate of production of each protein
+
+## Elements and Dynamics of Transcription networks
+
+### Cognitive problem of the cell
+
+Cells sense many kinds of signals like internal state, damage, temperature, osmotic pressure, harmful chemicals etc, hence produce appropriate proteins.
+
+Transcription factor
+
+:   Controls the rate of transcription of genetic information from DNA to mRNA, binding to a specific DNA sequence. They can transit quickly from active to inactive molecular state
+
+::: callout-note
+## In E.Coli, evolution selected those transcription factors (internal representations) that symbolize state most important for Cell Survival and Growth
+:::
+
+### Elements of Transcription networks
+
+![The environmental signals activate specific transcription factor proteins. The transcription factors, when active, bind DNA to change the transcription rate of specific target genes, the rate at which mRNA is produced. The mRNA is then translated into protein.](images/clipboard-1098536987.png)
+
+::: callout-note
+## Gene is a stretch of DNA, that encodes information needed for production of proteins
+:::
+
+### How transcription factors affect rate of production of mRNA?
+
+=\> RNAp binds the specific sequence at the **promoter,** that controls number of mRNA produces per time
+
+=\> Transcription factors bind specific sites of promoter, that change the probability per unit time RNAp binds to promoter to produce mRNA molecule. Thus transcription factors affect rate of transcription of gene
+
+There's a whole **transcription network** of transcription factors that effect every other of them!
+
+**Nodes** - Genes
+
+Edges - regulations of a gene by protein product of other gene
+
+> X → Y means that the product of gene X is a transcription factor protein that binds the promoter of gene Y to control the rate at which gene Y is transcribed.
+
+### How signals affect transcription factors
+
+Signals affect the activity of transcription factors (inactive to active and vice versa)
+
+They carry information from environment, that activate the biochemical signal transduction pathway, which chemically modifies a transcription factor which physically changes the transcription factor protein.
+
+![](images/clipboard-1025061568.png)
+
+### Timescales
+
+From signal to accumulation of protein products have different timescales at each step. So on a slow timescales, the transcription factor activity level can be considered steady state
+
+### Modularity of transcription network
+
+Green Fluroscent Protein (GFP) can be introduced into a bacteria to make it look green. Now, to regulate it for a particular signal like sugar inducible transcription factor, this causes bacteria to express GFP only in presence of sugar
+
+### Signs on Edges: Activators and Repressors
+
+A transcription factor be an activator for some genes and a repressor for others.
+
+Dual transcription factors, can act on a given gene as activators under some conditions and repressors under other conditions.
+
+### Numbers on the Edges: Input function
+
+**Hill function** describes the real gene input function considering the equilibrium binding of the transcription factor to its site on the promoter,
+
+**Hill function for activator:**
+
+$$
+f(X^*) = \frac{\beta X^{*n}}{K^n + X^{*n}}
+$$
+
+$K$ - **Activation coefficient** (concentration of active X needed to significantly activate expression) or threshold for activating target gene.
+
+$\beta$ - Maximal Expression level of the promoter
+
+$n$ - Steepness of input function (Hill's coefficient) typically, n = \[1 to 4\]
+
+Promoter activity is plotted as a function of the concentration of X in its active form (X\*)
+
+![](images/clipboard-1861857279.png)
+
+Since the probability that activator bind with promoter cannot exceed 1, Hill's function approach a limiting value at higher levels of $X^*$
+
+**Hill's input function for repressor:** decreasing S shaped curve
+
+$$
+f(X^*) = \frac{\beta}{1 + {(\frac{X^*}{K})}^n}
+$$
+
+![](images/clipboard-2959009077.png)
+
+### Logic Input functions: Simple framework for Network Dynamics
+
+Hill input functions -\> for detailed models
+
+Logic function ( $n \rightarrow \infty$ for Hill's function ) is a very steep curve, a step function.
+
+For activators:
+
+$$
+f(X^*) = \beta  \theta (X^* > K)
+$$
+
+$\theta = 0$ or 1 according to logic statement in the parenthesis above.
+
+For repressors:
+
+$$
+f(X^*) = \beta  \theta (X^* < K)
+$$
+
+### MultiDimensional Input functions Govern genes with Multiple Inputs
