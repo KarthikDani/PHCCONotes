@@ -8,7 +8,7 @@ book:
   chapters:
     - index.qmd
     - intro.qmd
-    - UriAlon1.qmd
+    - uri_alon.qmd
     - summary.qmd
     - references.qmd
 
