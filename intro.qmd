@@ -1,9 +1,56 @@
-# Introduction
+# Modeling
 
-This is a book created from markdown and executable code.
+## Models in systems biology
 
-See @knuth84 for additional discussion of literate programming.
+| Simple                                         | Complex                            |
+|------------------------------------------------|------------------------------------|
+| Generally assumptive                           | Less assumptive and more acccurate |
+| Has mathmatically simple equations as a result | Capture variations or details      |
+| Less number of parameters                      | More parameters                    |
 
-```{r}
-1 + 1
-```
+| Abstract            | Intuitive                      |
+|---------------------|--------------------------------|
+| More generalised    | Easily interpreatable          |
+| 1st principle based | Helps visualise for simplicity |
+|                     |                                |
+
+-   Maths models are more precise than computational models
+
+### Modeling process
+
+-   Define goals
+
+-   choose type of model
+
+-   equations and parameteric variables
+
+-   validation of dynamics
+
+-   hypothesis testing
+
+Scarce data can lead to overfitting models
+
+Qualitative data can give insight
+
+## Model building
+
+1.  Details, closed vs open, deterministic vs stochastic, discrete vs continuous
+2.  Dependent & independent variables, parameters, process & interactions, Universal constants, interacting components
+
+**Two types of parametric approach**
+
+-   Top down
+
+-   Down to up
+
+### Design principles
+
+laws in biology
+
+Common patterns in biological systems
+
+Why biosystems are the way they are?
+
+## Modeling on work
+
+-   Easiest way to model a system is to plot.
