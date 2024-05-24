@@ -144,7 +144,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Modeling</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -189,6 +189,7 @@ window.Quarto = {
   <li><a href="#numbers-on-the-edges-input-function" id="toc-numbers-on-the-edges-input-function" class="nav-link" data-scroll-target="#numbers-on-the-edges-input-function"><span class="header-section-number">3.1.8</span> Numbers on the Edges: Input function</a></li>
   <li><a href="#logic-input-functions-simple-framework-for-network-dynamics" id="toc-logic-input-functions-simple-framework-for-network-dynamics" class="nav-link" data-scroll-target="#logic-input-functions-simple-framework-for-network-dynamics"><span class="header-section-number">3.1.9</span> Logic Input functions: Simple framework for Network Dynamics</a></li>
   <li><a href="#multidimensional-input-functions-govern-genes-with-multiple-inputs" id="toc-multidimensional-input-functions-govern-genes-with-multiple-inputs" class="nav-link" data-scroll-target="#multidimensional-input-functions-govern-genes-with-multiple-inputs"><span class="header-section-number">3.1.10</span> MultiDimensional Input functions Govern genes with Multiple Inputs</a></li>
+  <li><a href="#dynamics-and-response-time-of-simple-gene-regulation" id="toc-dynamics-and-response-time-of-simple-gene-regulation" class="nav-link" data-scroll-target="#dynamics-and-response-time-of-simple-gene-regulation"><span class="header-section-number">3.1.11</span> Dynamics and Response time of Simple Gene Regulation</a></li>
   </ul></li>
   </ul></li>
   </ul>
@@ -338,6 +339,55 @@ f(X^*) = \beta  \theta (X^* &lt; K)
 </section>
 <section id="multidimensional-input-functions-govern-genes-with-multiple-inputs" class="level3" data-number="3.1.10">
 <h3 data-number="3.1.10" class="anchored" data-anchor-id="multidimensional-input-functions-govern-genes-with-multiple-inputs"><span class="header-section-number">3.1.10</span> MultiDimensional Input functions Govern genes with Multiple Inputs</h3>
+<p>Many genes are regulated by multiple transcription factors instead of single as seen above.</p>
+<p>Thus for promoter, it is a multiple dimension input function which is similar to AND gate,</p>
+<p><span class="math display">\[
+f(X^*, Y^*) = \beta \theta (X^* &gt; K_x) \theta (Y^* &gt; K_y)
+\]</span></p>
+<p>Like this some genes show OR behavior and some of them show SUM <span class="math inline">\(f(X^*, Y^*) = \beta \theta (X^* &gt; K_x\)</span> OR <span class="math inline">\(Y^* &gt; K_y)\)</span> whereas sum would be <span class="math inline">\(f(X^*, Y^*) = \beta_x X^* + \beta_y Y^*\)</span></p>
+</section>
+<section id="dynamics-and-response-time-of-simple-gene-regulation" class="level3" data-number="3.1.11">
+<h3 data-number="3.1.11" class="anchored"><span class="header-section-number">3.1.11</span> Dynamics and Response time of Simple Gene Regulation</h3>
+<p><span class="math inline">\(X \rightarrow Y\)</span> as X gets a signal <span class="math inline">\(\rightarrow\)</span> it regulates the Gene Y by binding Y’s promoter <span class="math inline">\(\rightarrow\)</span> Y gets transcribed and mRNA is translated <span class="math inline">\(\rightarrow\)</span> Y’s protein gets accumulated at a const <span class="math inline">\(\beta\)</span> conc/time.</p>
+<p>Y’s production is balanced by</p>
+<p>(a) <strong>Degradation</strong> by cell’s specialised proteins</p>
+<p>(b) <strong>Dilution</strong> due to increase in cell vol during growth</p>
+<p><span class="math display">\[
+\alpha = \alpha_{deg} + \alpha_{dil}
+\]</span></p>
+<p>Therefore change in concentration of <span class="math inline">\(\beta\)</span> is production - total degradation,</p>
+<p><span class="math display">\[
+\frac{d \beta}{dt} = \beta - \alpha Y
+\]</span></p>
+<p>So as <span class="math inline">\(Y\)</span> (protein concentration) changes, it reaches steady state where it is at constant concentration: <span class="math inline">\(Y_{st}\)</span> where <span class="math inline">\(\frac{d\beta}{dt} = 0\)</span>,</p>
+<p><span class="math display">\[
+Y_{st} = \frac{\beta}{\alpha}
+\]</span></p>
+<p>Now, if the signal is taken away (<span class="math inline">\(\beta = 0\)</span>) the rate at which protein concentration <span class="math inline">\(Y\)</span> changes is,</p>
+<p><span class="math display">\[
+Y(t) = Y_{st} e^{- \alpha t}
+\]</span></p>
+<p>The response time, <span class="math inline">\(T_{\frac{1}{2}}\)</span> now will be from intially <span class="math inline">\(Y_{st}\)</span> to <span class="math inline">\(Y = 0\)</span>,</p>
+<p><span class="math display">\[
+T_{1/2} = \frac{log(2)}{a}
+\]</span></p>
+<p><img src="images/clipboard-2376130674.png" class="img-fluid"></p>
+<div class="callout callout-style-simple callout-important no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+1. All under the assumption X remains constant throughout the process, that leads to $\beta = f(X^*)$ which remains constant.
+</div>
+</div>
+<section id="time-for-transcription-to-translation-is-neglected-small-compared-to-response-time-of-protein-dynamics" class="level2 callout-body-container callout-body" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="time-for-transcription-to-translation-is-neglected-small-compared-to-response-time-of-protein-dynamics"><span class="header-section-number">3.2</span> 2. Time for transcription to translation is neglected (Small compared to response time of protein dynamics)</h2>
+</section>
+</div>
+<blockquote class="blockquote">
+<p>Production of <span class="math inline">\(\beta\)</span> affects the steady state level but not the response time</p>
+</blockquote>
 
 
 </section>
@@ -756,8 +806,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./intro.html" class="pagination-link" aria-label="Introduction">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span>
+      <a href="./intro.html" class="pagination-link" aria-label="Modeling">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Modeling</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

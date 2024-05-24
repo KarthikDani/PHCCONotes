@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>PHCCO Notes - 1&nbsp; Modeling</title>
+<title>hallmarks_of_cancer</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,257 +23,51 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./uri_alon.html" rel="next">
-<link href="./index.html" rel="prev">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
-  "copy-button": false,
-  "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
-  "limit": 50,
-  "keyboard-shortcut": [
-    "f",
-    "/",
-    "s"
-  ],
-  "show-item-context": false,
-  "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
-    "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
-  }
-}</script>
+<script src="hallmarks_of_cancer_files/libs/clipboard/clipboard.min.js"></script>
+<script src="hallmarks_of_cancer_files/libs/quarto-html/quarto.js"></script>
+<script src="hallmarks_of_cancer_files/libs/quarto-html/popper.min.js"></script>
+<script src="hallmarks_of_cancer_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="hallmarks_of_cancer_files/libs/quarto-html/anchor.min.js"></script>
+<link href="hallmarks_of_cancer_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="hallmarks_of_cancer_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="hallmarks_of_cancer_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="hallmarks_of_cancer_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="hallmarks_of_cancer_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 
 
 </head>
 
-<body class="nav-sidebar floating">
+<body class="fullcontent">
 
-<div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Modeling</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
-    </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
-<!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
-    <div class="sidebar-title mb-0 py-0">
-      <a href="./">PHCCO Notes</a> 
-    </div>
-      </div>
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-        </div>
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Preface</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Modeling</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./uri_alon.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">UriAlon - Intro to SysBio</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">References</span></a>
-  </div>
-</li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
-<!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#models-in-systems-biology" id="toc-models-in-systems-biology" class="nav-link active" data-scroll-target="#models-in-systems-biology"><span class="header-section-number">1.1</span> Models in systems biology</a>
-  <ul class="collapse">
-  <li><a href="#modeling-process" id="toc-modeling-process" class="nav-link" data-scroll-target="#modeling-process"><span class="header-section-number">1.1.1</span> Modeling process</a></li>
-  </ul></li>
-  <li><a href="#model-building" id="toc-model-building" class="nav-link" data-scroll-target="#model-building"><span class="header-section-number">1.2</span> Model building</a>
-  <ul class="collapse">
-  <li><a href="#design-principles" id="toc-design-principles" class="nav-link" data-scroll-target="#design-principles"><span class="header-section-number">1.2.1</span> Design principles</a></li>
-  </ul></li>
-  <li><a href="#modeling-on-work" id="toc-modeling-on-work" class="nav-link" data-scroll-target="#modeling-on-work"><span class="header-section-number">1.3</span> Modeling on work</a></li>
-  </ul>
-</nav>
-    </div>
-<!-- main -->
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Modeling</span></h1>
-</div>
 
 
 
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<section id="models-in-systems-biology" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="models-in-systems-biology"><span class="header-section-number">1.1</span> Models in systems biology</h2>
-<table class="table">
-<colgroup>
-<col style="width: 57%">
-<col style="width: 42%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Simple</th>
-<th>Complex</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Generally assumptive</td>
-<td>Less assumptive and more acccurate</td>
-</tr>
-<tr class="even">
-<td>Has mathmatically simple equations as a result</td>
-<td>Capture variations or details</td>
-</tr>
-<tr class="odd">
-<td>Less number of parameters</td>
-<td>More parameters</td>
-</tr>
-</tbody>
-</table>
-<table class="table">
-<thead>
-<tr class="header">
-<th>Abstract</th>
-<th>Intuitive</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>More generalised</td>
-<td>Easily interpreatable</td>
-</tr>
-<tr class="even">
-<td>1st principle based</td>
-<td>Helps visualise for simplicity</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>Maths models are more precise than computational models</li>
-</ul>
-<section id="modeling-process" class="level3" data-number="1.1.1">
-<h3 data-number="1.1.1" class="anchored" data-anchor-id="modeling-process"><span class="header-section-number">1.1.1</span> Modeling process</h3>
-<ul>
-<li><p>Define goals</p></li>
-<li><p>choose type of model</p></li>
-<li><p>equations and parameteric variables</p></li>
-<li><p>validation of dynamics</p></li>
-<li><p>hypothesis testing</p></li>
-</ul>
-<p>Scarce data can lead to overfitting models</p>
-<p>Qualitative data can give insight</p>
+<section id="hallmarks-of-cancer" class="level1">
+<h1>Hallmarks of Cancer</h1>
+<section id="paper-2000" class="level2">
+<h2 class="anchored" data-anchor-id="paper-2000">Paper 2000</h2>
+<p>Cancer is a disease involving <strong>dynamics changes in the Genome.</strong></p>
+<p>Bishop and Weinberg 1996 paper for experimental modeling</p>
+<blockquote class="blockquote">
+<p>Tumourigenesis as a result of genetic alterations, <strong>at multiple sites</strong> from point mutations to changes in chromosome complement</p>
+</blockquote>
+<p>Cancer Development is embodied in the purpose the growth serves rather than the cause through which they arise!</p>
+<p>Cancer cells have Defects in their regulatory circuit that govern the normal proliferation &amp; homeostasis</p>
+<section id="self-sufficiency-in-growth-signals" class="level3">
+<h3 class="anchored" data-anchor-id="self-sufficiency-in-growth-signals">Self Sufficiency in Growth Signals</h3>
+<p>Normal cells need <strong>Mitogenic Growth Signals (GS)</strong> to move from Quienscent state to Active state.</p>
+<p>Three common molecular strategies for achieving autonomy are evident, involving alteration of extracellular growth signals, of transcellular transducers of those signals, or of intracellular circuits that translate those signals into action.</p>
+<p>manufacture of a GF by a cancer cell obviates dependence on GFs from other cells within the tissue.</p>
 </section>
 </section>
-<section id="model-building" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="model-building"><span class="header-section-number">1.2</span> Model building</h2>
-<ol type="1">
-<li>Details, closed vs open, deterministic vs stochastic, discrete vs continuous</li>
-<li>Dependent &amp; independent variables, parameters, process &amp; interactions, Universal constants, interacting components</li>
-</ol>
-<p><strong>Two types of parametric approach</strong></p>
-<ul>
-<li><p>Top down</p></li>
-<li><p>Down to up</p></li>
-</ul>
-<section id="design-principles" class="level3" data-number="1.2.1">
-<h3 data-number="1.2.1" class="anchored" data-anchor-id="design-principles"><span class="header-section-number">1.2.1</span> Design principles</h3>
-<p>laws in biology</p>
-<p>Common patterns in biological systems</p>
-<p>Why biosystems are the way they are?</p>
-</section>
-</section>
-<section id="modeling-on-work" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="modeling-on-work"><span class="header-section-number">1.3</span> Modeling on work</h2>
-<ul>
-<li>Easiest way to model a system is to plot.</li>
-</ul>
-
-
 </section>
 
-</main> <!-- /main -->
+</main>
+<!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -683,18 +477,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link" aria-label="Preface">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Preface</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="./uri_alon.html" class="pagination-link" aria-label="UriAlon - Intro to SysBio">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">UriAlon - Intro to SysBio</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 
 

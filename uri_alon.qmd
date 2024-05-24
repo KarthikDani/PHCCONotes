@@ -119,3 +119,61 @@ f(X^*) = \beta  \theta (X^* < K)
 $$
 
 ### MultiDimensional Input functions Govern genes with Multiple Inputs
+
+Many genes are regulated by multiple transcription factors instead of single as seen above.
+
+Thus for promoter, it is a multiple dimension input function which is similar to AND gate,
+
+$$
+f(X^*, Y^*) = \beta \theta (X^* > K_x) \theta (Y^* > K_y)
+$$
+
+Like this some genes show OR behavior and some of them show SUM $f(X^*, Y^*) = \beta \theta (X^* > K_x$ OR $Y^* > K_y)$ whereas sum would be $f(X^*, Y^*) = \beta_x X^* + \beta_y Y^*$
+
+### Dynamics and Response time of Simple Gene Regulation
+
+$X \rightarrow Y$ as X gets a signal $\rightarrow$ it regulates the Gene Y by binding Y's promoter $\rightarrow$ Y gets transcribed and mRNA is translated $\rightarrow$ Y's protein gets accumulated at a const $\beta$ conc/time.
+
+Y's production is balanced by
+
+\(a\) **Degradation** by cell's specialised proteins
+
+\(b\) **Dilution** due to increase in cell vol during growth
+
+$$
+\alpha = \alpha_{deg} + \alpha_{dil}
+$$
+
+Therefore change in concentration of $\beta$ is production - total degradation,
+
+$$
+\frac{d \beta}{dt} = \beta - \alpha Y
+$$
+
+So as $Y$ (protein concentration) changes, it reaches steady state where it is at constant concentration: $Y_{st}$ where $\frac{d\beta}{dt} = 0$,
+
+$$
+Y_{st} = \frac{\beta}{\alpha}
+$$
+
+Now, if the signal is taken away ($\beta = 0$) the rate at which protein concentration $Y$ changes is,
+
+$$
+Y(t) = Y_{st} e^{- \alpha t}
+$$
+
+The response time, $T_{\frac{1}{2}}$ now will be from intially $Y_{st}$ to $Y = 0$,
+
+$$
+T_{1/2} = \frac{log(2)}{a}
+$$
+
+![](images/clipboard-2376130674.png)
+
+::: {.callout-important appearance="minimal"}
+## 1. All under the assumption X remains constant throughout the process, that leads to \$\\beta = f(X\^\*)\$ which remains constant.
+
+## 2. Time for transcription to translation is neglected (Small compared to response time of protein dynamics)
+:::
+
+> Production of $\beta$ affects the steady state level but not the response time

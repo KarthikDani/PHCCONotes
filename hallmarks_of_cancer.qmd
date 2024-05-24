@@ -1,0 +1,21 @@
+# Hallmarks of Cancer
+
+## Paper 2000
+
+Cancer is a disease involving **dynamics changes in the Genome.**
+
+Bishop and Weinberg 1996 paper for experimental modeling
+
+> Tumourigenesis as a result of genetic alterations, **at multiple sites** from point mutations to changes in chromosome complement
+
+Cancer Development is embodied in the purpose the growth serves rather than the cause through which they arise!
+
+Cancer cells have Defects in their regulatory circuit that govern the normal proliferation & homeostasis
+
+### Self Sufficiency in Growth Signals
+
+Normal cells need **Mitogenic Growth Signals (GS)** to move from Quienscent state to Active state.
+
+Three common molecular strategies for achieving autonomy are evident, involving alteration of extracellular growth signals, of transcellular transducers of those signals, or of intracellular circuits that translate those signals into action.
+
+manufacture of a GF by a cancer cell obviates dependence on GFs from other cells within the tissue.
